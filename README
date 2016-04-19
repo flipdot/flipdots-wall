@@ -1,0 +1,9 @@
+**INTRO**
+
+The flipdots controller is a raspberry pi running a UPD server.
+
+The IP in the space is 192.168.3.36:2323
+
+One bit is one pixel (so you set eigth dots per byte)
+
+**Getting started**
