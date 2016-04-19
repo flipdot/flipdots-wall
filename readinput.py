@@ -9,9 +9,6 @@ counter = 0
 i = 0
 while True:
    buffer = fp.read(8)
-   for c in buffer:
-      if ord(c) > 0:
-         print ord(c)
    i = i + 1
 
    if i % 270 == 0:
