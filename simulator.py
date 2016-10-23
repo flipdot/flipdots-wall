@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # created by swegener
 from io import BlockingIOError
-
 import pygame
 import socket
 
@@ -32,6 +31,7 @@ class Display():
     def run(self, sock):
         sock.setblocking(False)
         pygame.init()
+        pygame.display.set_caption('flipdot simulator')
         width = DISPLAY_WIDTH * PIXEL_SIZE
         height = DISPLAY_HEIGHT * PIXEL_SIZE
         screen = pygame.display.set_mode((width, height))
