@@ -13,20 +13,13 @@ DISPLAY_WIDTH = 48
 DISPLAY_HEIGHT = 20
 FPS = 60
 
-
-# while True:
-#
-
-def bits(n):
-    while n:
-        b = n & (~n + 1)
-        yield b
-        n ^= b
-
-
 class Display():
     def __init__(self):
-        self.matrix = [[0] * DISPLAY_HEIGHT for x in range(DISPLAY_WIDTH)]
+        self.matrix = Display.generate_matrix()
+
+    @staticmethod
+    def generate_matrix():
+        return [[0] * DISPLAY_HEIGHT for x in range(DISPLAY_WIDTH)]
 
     def run(self, sock):
         sock.setblocking(False)
