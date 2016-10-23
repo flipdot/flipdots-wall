@@ -9,3 +9,4 @@ done
 
 cat $3links.bin $2links.bin $1links.bin > $1.bin
 dd if=$1.bin skip=0 bs=144 count=1 2>/dev/null | socat - UDP:192.168.3.36:2323 &
+dd if=$1.bin skip=0 bs=144 count=1 2>/dev/null | socat - UDP:127.0.0.1:2323 &
