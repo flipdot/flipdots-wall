@@ -4,7 +4,7 @@ from io import BlockingIOError
 import pygame
 import socket
 
-UDP_IP = "127.0.0.1"
+UDP_IP = '127.0.0.1'
 UDP_PORT = 2323
 
 PIXEL_SIZE = 10
@@ -51,7 +51,7 @@ class Display():
                 if y == 0 and i != 0:
                     # do not care about the extra bits in the last byte
                     break
-                self.matrix[-1 * x][y] = not not bit
+                self.matrix[-1 * (x+1)][y] = not not bit
                 n += 1
 
     def handle_events(self):
